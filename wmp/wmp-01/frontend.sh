@@ -3,7 +3,7 @@ echo -e "${YC}" "Installing nginx "${NC}""
 dnf module disable nginx -y
 dnf module enable nginx:1.26 -y
 dnf install -y nginx
-if [ $? -eq 0]; then
+if [ $? -eq 0 ]; then
     echo "Installation is successful" 
 else
     echo "Installation is not success"
