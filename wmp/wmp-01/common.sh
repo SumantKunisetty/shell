@@ -1,6 +1,6 @@
 app_prereq(){
     id appuser &>/dev/null
-    if [ $? -eq 0]; then
+    if [ $? -eq 0 ]; then
         echo "app user already exists"
     else
         useradd -r -s /bin/false appuser
