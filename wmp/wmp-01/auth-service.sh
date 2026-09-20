@@ -12,5 +12,5 @@ chown -R appuser:appuser /app
 chmod o-rwx /app -R
 #systemctl commands
 systemctl daemon-reload
-systemctl enable {service_name}
-systemctl start {service_name}
+systemctl enable ${service_name}
+systemctl start ${service_name}
