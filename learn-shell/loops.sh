@@ -4,6 +4,6 @@ done
 
 x=5
 while [ $x -lt 0 ]; do
-    echo $x
-    $x = $x -1
+    echo "value: $x"
+    x=$(x-1)
 done
