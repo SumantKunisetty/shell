@@ -2,7 +2,7 @@ app_prereq(){
     id appuser &>/dev/null
     if [ $? -eq 0]; then
         echo "app user already exists"
-    else:
+    else
         useradd -r -s /bin/false appuser
     fi
     mkdir -p /app
