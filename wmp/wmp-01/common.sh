@@ -13,3 +13,11 @@ app_prereq(){
 
 YC="\e[33m"
 NC="\e[0m"
+
+test_status(){
+    if [ $? -eq 0 ]; then
+        echo "Installation is successful" 
+    else
+        echo "Installation is not success"
+fi
+}
