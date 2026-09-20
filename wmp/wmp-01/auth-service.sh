@@ -9,6 +9,7 @@ cd /app
 CGO_ENABLED=0 go build -o auth-service ./cmd/server
 chown -R appuser:appuser /app
 chmod o-rwx /app -R
+#systemctl commands
 systemctl daemon-reload
 systemctl enable auth-service
 systemctl start auth-service
