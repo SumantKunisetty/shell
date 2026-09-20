@@ -1,15 +1,17 @@
+service_name = auth-service
+
 dnf install -y golang
-cp auth-service.service /etc/systemd/system/
+cp {service_name}.service /etc/systemd/system/
 useradd -r -s /bin/false appuser
 mkdir -p /app
-curl -L -o /tmp/auth-service.tar.gz https://raw.githubusercontent.com/raghudevopsb88/wealth-project/main/artifacts/auth-service.tar.gz
+curl -L -o /tmp/{service_name}.tar.gz https://raw.githubusercontent.com/raghudevopsb88/wealth-project/main/artifacts/{service_name}.tar.gz
 cd /app
-tar xzf /tmp/auth-service.tar.gz
+tar xzf /tmp/{service_name}.tar.gz
 cd /app
-CGO_ENABLED=0 go build -o auth-service ./cmd/server
+CGO_ENABLED=0 go build -o {service_name} ./cmd/server
 chown -R appuser:appuser /app
 chmod o-rwx /app -R
 #systemctl commands
 systemctl daemon-reload
-systemctl enable auth-service
-systemctl start auth-service
+systemctl enable {service_name}
+systemctl start {service_name}
