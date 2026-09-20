@@ -3,7 +3,7 @@ for service in auth-servie portfolio-service analytics-service; do
 done
 
 x=5
-while [ $x -lt 0 ]; do
+while [ $x -gt 0 ]; do
     echo "value: $x"
-    x=$(x-1)
+    $x=$x-1
 done
