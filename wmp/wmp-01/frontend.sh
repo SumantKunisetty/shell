@@ -1,4 +1,4 @@
-source common
+source common.sh
 echo -e "${YC}" "Installing nginx "${NC}""
 dnf module disable nginx -y
 dnf module enable nginx:1.26 -y
