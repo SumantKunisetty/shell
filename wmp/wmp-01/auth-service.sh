@@ -1,5 +1,4 @@
-service_name = auth-service
-
+service_name=auth-service
 dnf install -y golang
 cp {service_name}.service /etc/systemd/system/
 useradd -r -s /bin/false appuser
